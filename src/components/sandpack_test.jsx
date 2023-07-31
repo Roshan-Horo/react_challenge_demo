@@ -4,22 +4,24 @@ import { SandpackProvider,
   SandpackPreview,
   SandpackFileExplorer,
   SandpackTests,
-  SandpackCodeViewer
+  SandpackCodeViewer,
+  SandpackConsole
 } from "@codesandbox/sandpack-react"
 
-export default function SandpackComponent(){
+export default function SandpackTestComponent(){
   return (
     <>
       <div>
       <h2>Sandpack with Composition Layout</h2>
 
-      <SandpackProvider template="nextjs" theme="dark">
+      <SandpackProvider template="test-ts" theme="dark">
         <SandpackLayout>
           <SandpackFileExplorer />
           {/* <SandpackCodeEditor /> */}
           <SandpackCodeViewer />
           <SandpackPreview />
           <SandpackTests />
+          <SandpackConsole />
         </SandpackLayout>
       </SandpackProvider>
 
